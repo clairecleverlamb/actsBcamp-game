@@ -3,7 +3,7 @@
 .winner-section {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(180deg, transparent 0%, rgba(13, 148, 136, 0.06) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(79, 70, 229, 0.04) 100%);
 }
 
 .winner-title {
@@ -30,7 +30,7 @@
   background: #fff;
   color: var(--text);
   text-align: center;
-  box-shadow: 0 8px 32px rgba(13, 148, 136, 0.2);
+  box-shadow: 0 8px 32px rgba(79, 70, 229, 0.15);
 }
 
 .winner-input-group input::placeholder {
@@ -40,16 +40,17 @@
 .winner-input-group input:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 8px 40px rgba(234, 88, 12, 0.25);
+  box-shadow: 0 8px 40px rgba(249, 115, 22, 0.2);
 }
 
 .btn-announce {
   padding: 1.25rem 2.5rem !important;
   font-size: 1.25rem !important;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
+  background: linear-gradient(135deg, var(--accent) 0%, #ea580c 100%) !important;
+  color: #fff !important;
 }
 
 .btn-announce:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(13, 148, 136, 0.4);
+  box-shadow: 0 12px 40px rgba(249, 115, 22, 0.4);
 }

@@ -22,7 +22,7 @@
 .nav-dot.active {
   background: var(--primary);
   transform: scale(1.3);
-  box-shadow: 0 0 15px rgba(13, 148, 136, 0.5);
+  box-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
 }
 
 @media (max-width: 600px) {

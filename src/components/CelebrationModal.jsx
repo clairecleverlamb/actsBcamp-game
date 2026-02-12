@@ -5,7 +5,7 @@ import './CelebrationModal.css'
 function fireConfetti() {
   const duration = 5000
   const end = Date.now() + duration
-  const colors = ['#0d9488', '#0f766e', '#fef3c7', '#fcd34d', '#5eead4', '#7dd3fc', '#ea580c', '#fff']
+  const colors = ['#4f46e5', '#818cf8', '#fef08a', '#facc15', '#f97316', '#fb923c', '#e0e7ff', '#fff']
 
   const frame = () => {
     confetti({
