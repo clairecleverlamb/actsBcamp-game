@@ -5,11 +5,7 @@ export default function SharePrompts() {
     <div className="section share-section">
       <h2 className="share-heading">Share with Your Group!</h2>
       <div className="share-card">
-        <div className="share-basics">
-          <div className="share-badge">Name</div>
-          <div className="share-badge">Campus</div>
-          <div className="share-badge">Major</div>
-        </div>
+        <p className="share-basics-line">Name / Campus / Major</p>
         <div className="share-divider" />
         <div className="share-questions">
           <p className="share-line">❄️ Winter people — are you calm and cozy? Why?</p>

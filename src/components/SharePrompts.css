@@ -20,24 +20,14 @@
   border: 3px solid rgba(79, 70, 229, 0.15);
 }
 
-/* Name / Campus / Major badges */
-.share-basics {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.5rem;
-}
-
-.share-badge {
+/* Name / Campus / Major */
+.share-basics-line {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.6rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   letter-spacing: 0.06em;
-  color: #fff;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-  padding: 0.75rem 2rem;
-  border-radius: 14px;
-  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.3);
+  color: var(--text);
+  text-align: center;
+  margin: 0 0 0.5rem;
 }
 
 .share-divider {
@@ -86,15 +76,9 @@
     border-width: 4px;
   }
 
-  .share-basics {
-    gap: 1.5rem;
+  .share-basics-line {
+    font-size: clamp(3rem, 5vw, 4.5rem);
     margin-bottom: 1rem;
-  }
-
-  .share-badge {
-    font-size: 2.2rem;
-    padding: 1rem 3rem;
-    border-radius: 18px;
   }
 
   .share-divider {
