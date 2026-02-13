@@ -113,11 +113,11 @@
 /* Timer */
 .timer-box {
   background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
-  border-radius: 16px;
-  padding: 2rem;
+  border-radius: 24px;
+  padding: 3rem 4rem;
   text-align: center;
-  margin: 1.5rem 0 0;
-  border: 2px solid var(--primary);
+  margin: 0;
+  border: 3px solid var(--primary);
 }
 
 .timer-box.timer-warning {
@@ -133,35 +133,36 @@
 
 .timer-display {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 4.5rem;
+  font-size: clamp(6rem, 15vw, 10rem);
   color: var(--primary-dark);
   margin: 0.5rem 0;
   letter-spacing: 0.02em;
+  line-height: 1;
 }
 
 .timer-label {
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--text);
   opacity: 0.9;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 }
 
 .timer-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .btn {
-  padding: 0.85rem 1.75rem;
+  padding: 1rem 2.25rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 14px;
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.15rem;
   cursor: pointer;
   transition: all 0.2s;
 }
