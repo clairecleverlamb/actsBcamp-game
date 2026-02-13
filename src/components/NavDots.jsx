@@ -2,6 +2,7 @@ import './NavDots.css'
 
 const sections = [
   { id: 'game1-q', href: '#game1-q' },
+  { id: 'game1-q2', href: '#game1-q2' },
   { id: 'game1-timer', href: '#game1-timer' },
   { id: 'game2-intro', href: '#game2-intro' },
   { id: 'game2-commands', href: '#game2-commands' },

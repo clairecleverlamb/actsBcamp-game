@@ -94,6 +94,29 @@ export function FourCornersQuestion() {
   )
 }
 
+export function FourCornersQuestion2() {
+  return (
+    <div className="section">
+      <div className="card">
+        <div className="corners-question">
+          <p className="question-text">On a nice day, do you prefer taking a walk or staying indoors?</p>
+          <div className="choices-col">
+            <div className="choice-photo choice-walk">
+              <img src="/walk.jpg" alt="Taking a walk" />
+              <span>Taking a Walk</span>
+            </div>
+            <div className="choice-divider-h" />
+            <div className="choice-photo choice-indoor">
+              <img src="/indoor.png" alt="Staying indoors" />
+              <span>Staying Indoors</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export function FourCornersTimer() {
   const [seconds, setSeconds] = useState(120)
   const [isRunning, setIsRunning] = useState(false)

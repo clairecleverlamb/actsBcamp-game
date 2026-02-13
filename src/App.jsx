@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Hero from './components/Hero'
-import { FourCornersQuestion, FourCornersTimer } from './components/GameFourCorners'
+import { FourCornersQuestion, FourCornersQuestion2, FourCornersTimer } from './components/GameFourCorners'
 import { ClumpsIntro, ClumpsCommands } from './components/GamePirate'
 import { BiathlonIntro, BiathlonActsVersion, BiathlonRules } from './components/GameBiathlon'
 import WinterOlympics from './components/WinterOlympics'
@@ -48,6 +48,9 @@ function App() {
         {/* Game 1: 4 Corners */}
         <section id="game1-q">
           <FourCornersQuestion />
+        </section>
+        <section id="game1-q2">
+          <FourCornersQuestion2 />
         </section>
         <section id="game1-timer">
           <FourCornersTimer />
