@@ -119,3 +119,15 @@
   60% { transform: rotate(10deg); }
   70% { transform: rotate(0deg); }
 }
+
+/* ====== Large Screen Overrides ====== */
+@media (min-width: 1200px) {
+  .thanks-title {
+    font-size: clamp(5rem, 12vw, 9rem) !important;
+    margin-bottom: 1rem;
+  }
+
+  .thanks-text {
+    font-size: 2.5rem;
+  }
+}

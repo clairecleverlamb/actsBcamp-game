@@ -88,16 +88,16 @@
 /* Hover preview image */
 .command-preview {
   position: absolute;
-  bottom: calc(100% + 12px);
+  bottom: calc(100% + 16px);
   left: 50%;
   transform: translateX(-50%);
   z-index: 50;
-  width: 450px;
+  width: 600px;
   background: #fff;
-  border-radius: 16px;
-  padding: 6px;
-  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.25);
-  border: 2px solid var(--primary);
+  border-radius: 20px;
+  padding: 8px;
+  box-shadow: 0 16px 50px rgba(15, 23, 42, 0.3);
+  border: 3px solid var(--primary);
   animation: previewFadeIn 0.2s ease-out;
 }
 
@@ -125,5 +125,56 @@
 
   .command-preview {
     width: 300px;
+  }
+}
+
+/* ====== Large Screen Overrides ====== */
+@media (min-width: 1200px) {
+  .clumps-section {
+    max-width: 1400px;
+  }
+
+  .clumps-img {
+    border-radius: 24px;
+    box-shadow: 0 12px 48px rgba(15, 23, 42, 0.18);
+  }
+
+  .commands-heading {
+    font-size: clamp(3.5rem, 5vw, 5rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .commands-hint {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .commands-grid {
+    gap: 2.5rem;
+  }
+
+  .command-card {
+    padding: 3rem 2.5rem;
+    border-radius: 24px;
+    gap: 2rem;
+  }
+
+  .command-number {
+    width: 100px;
+    height: 100px;
+    font-size: 3.5rem;
+    border-radius: 22px;
+  }
+
+  .command-name {
+    font-size: clamp(2rem, 3vw, 3rem);
+  }
+
+  .command-action {
+    font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  }
+
+  .command-preview {
+    width: 700px;
   }
 }

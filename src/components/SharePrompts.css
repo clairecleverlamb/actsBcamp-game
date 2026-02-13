@@ -1,0 +1,109 @@
+.share-section {
+  text-align: center;
+}
+
+.share-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+
+.share-card {
+  background: linear-gradient(135deg, #fff 0%, #f1f0ff 100%);
+  border-radius: 24px;
+  padding: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 40px rgba(79, 70, 229, 0.12);
+  border: 3px solid rgba(79, 70, 229, 0.15);
+}
+
+/* Name / Campus / Major badges */
+.share-basics {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.share-badge {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  padding: 0.75rem 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.3);
+}
+
+.share-divider {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
+  opacity: 0.4;
+  margin: 1.5rem 0;
+  border-radius: 2px;
+}
+
+/* Discussion questions */
+.share-questions {
+  text-align: left;
+}
+
+.share-line {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+.share-line:hover {
+  background: rgba(79, 70, 229, 0.06);
+}
+
+.share-line:last-child {
+  margin-bottom: 0;
+}
+
+/* ====== Large Screen Overrides ====== */
+@media (min-width: 1200px) {
+  .share-heading {
+    font-size: clamp(4rem, 6vw, 6rem);
+    margin-bottom: 3rem;
+  }
+
+  .share-card {
+    max-width: 1100px;
+    padding: 4rem 5rem;
+    border-radius: 32px;
+    border-width: 4px;
+  }
+
+  .share-basics {
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .share-badge {
+    font-size: 2.2rem;
+    padding: 1rem 3rem;
+    border-radius: 18px;
+  }
+
+  .share-divider {
+    margin: 2rem 0;
+  }
+
+  .share-line {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1.25rem;
+  }
+}

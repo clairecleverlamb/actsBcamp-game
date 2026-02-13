@@ -10,10 +10,10 @@
 
 .rules-heading {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   color: var(--text);
   letter-spacing: 0.05em;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .step-badge {
@@ -38,38 +38,39 @@
 .biathlon-rules {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+  gap: 1.75rem;
+  width: 100%;
 }
 
 .rule-item {
   background: #fff;
-  border-radius: 16px;
-  padding: 1.5rem;
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
-  border: 2px solid rgba(79, 70, 229, 0.12);
+  gap: 1.25rem;
+  box-shadow: 0 6px 28px rgba(15, 23, 42, 0.1);
+  border: 3px solid rgba(79, 70, 229, 0.15);
 }
 
 .rule-number {
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--primary);
   color: #fff;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   border-radius: 50%;
 }
 
 .rule-item p {
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.3rem;
+  line-height: 1.7;
   color: var(--text);
 }
 
@@ -130,5 +131,64 @@
 @media (max-width: 600px) {
   .biathlon-rules {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ====== Large Screen Overrides ====== */
+@media (min-width: 1200px) {
+  .biathlon-section {
+    max-width: 1400px;
+  }
+
+  .step-badge {
+    font-size: 2.2rem;
+    padding: 0.75rem 2.5rem;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+  }
+
+  .biathlon-img {
+    border-radius: 24px;
+    box-shadow: 0 12px 48px rgba(15, 23, 42, 0.18);
+    border-width: 4px;
+  }
+
+  .rules-heading {
+    font-size: clamp(4rem, 6vw, 5.5rem);
+    margin-bottom: 2.5rem;
+  }
+
+  .biathlon-rules {
+    gap: 2.5rem;
+  }
+
+  .rule-item {
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    gap: 2rem;
+    border-width: 4px;
+  }
+
+  .rule-number {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+  }
+
+  .rule-item p {
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+
+  .clean-sm {
+    font-size: clamp(4rem, 10vw, 7rem);
+  }
+
+  .clean-md {
+    font-size: clamp(7rem, 16vw, 12rem);
+  }
+
+  .clean-lg {
+    font-size: clamp(12rem, 26vw, 20rem);
   }
 }

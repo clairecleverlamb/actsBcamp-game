@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Hero from './components/Hero'
 import { FourCornersQuestion, FourCornersQuestion2, FourCornersTimer } from './components/GameFourCorners'
+import SharePrompts from './components/SharePrompts'
 import { ClumpsIntro, ClumpsCommands } from './components/GamePirate'
 import { BiathlonIntro, BiathlonClean, BiathlonActsVersion, BiathlonRules } from './components/GameBiathlon'
 import WinterOlympics from './components/WinterOlympics'
@@ -51,6 +52,9 @@ function App() {
         </section>
         <section id="game1-q2">
           <FourCornersQuestion2 />
+        </section>
+        <section id="game1-share">
+          <SharePrompts />
         </section>
         <section id="game1-timer">
           <FourCornersTimer />

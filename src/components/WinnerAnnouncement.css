@@ -54,3 +54,30 @@
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 12px 40px rgba(249, 115, 22, 0.4);
 }
+
+/* ====== Large Screen Overrides ====== */
+@media (min-width: 1200px) {
+  .winner-title {
+    font-size: clamp(4rem, 6vw, 6rem) !important;
+    margin-bottom: 1rem;
+  }
+
+  .winner-input-group {
+    max-width: 700px;
+    gap: 2rem;
+    margin: 3rem auto;
+  }
+
+  .winner-input-group input {
+    padding: 1.75rem 2rem;
+    font-size: 2rem;
+    border-radius: 20px;
+    border-width: 4px;
+  }
+
+  .btn-announce {
+    padding: 1.75rem 3.5rem !important;
+    font-size: 1.75rem !important;
+    border-radius: 20px !important;
+  }
+}
