@@ -21,7 +21,7 @@ export default function WinnerAnnouncement({ onAnnounce }) {
           onKeyDown={(e) => e.key === 'Enter' && handleClick()}
         />
         <button className="btn btn-announce" onClick={handleClick}>
-          🎉 Announce Winner!
+          Announce Winner!
         </button>
       </div>
     </div>

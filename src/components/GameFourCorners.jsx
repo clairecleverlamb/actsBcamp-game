@@ -69,7 +69,32 @@ function SnowflakeIcon() {
   )
 }
 
-export default function GameFourCorners() {
+export function FourCornersQuestion() {
+  return (
+    <div className="section">
+      <p className="section-label">Game 1</p>
+      <h2 className="section-title">4 Corners</h2>
+      <div className="card">
+        <div className="corners-question">
+          <p className="question-text">Do you enjoy the Summer or Winter more?</p>
+          <div className="choices-row">
+            <div className="choice choice-summer">
+              <SunIcon />
+              <span>Summer</span>
+            </div>
+            <div className="choice-divider" />
+            <div className="choice choice-winter">
+              <SnowflakeIcon />
+              <span>Winter</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export function FourCornersTimer() {
   const [seconds, setSeconds] = useState(120)
   const [isRunning, setIsRunning] = useState(false)
   const intervalRef = useRef(null)
@@ -90,51 +115,33 @@ export default function GameFourCorners() {
 
   return (
     <div className="section">
-      <p className="section-label">Game 1</p>
-      <h2 className="section-title">4 Corners</h2>
-      <div className="card">
-        <div className="corners-question">
-          <p className="question-text">Do you enjoy the Summer or Winter more?</p>
-          <div className="choices-row">
-            <div className="choice choice-summer">
-              <SunIcon />
-              <span>Summer</span>
-            </div>
-            <div className="choice-divider" />
-            <div className="choice choice-winter">
-              <SnowflakeIcon />
-              <span>Winter</span>
-            </div>
-          </div>
-        </div>
-        <div className={`timer-box ${seconds <= 30 ? 'timer-warning' : ''}`}>
-          <p className="section-label">Get to Know Each Other — Switch Timer</p>
-          <div className="timer-display">{formatTime(seconds)}</div>
-          <p className="timer-label">Time until switch to next group</p>
-          <div className="timer-buttons">
-            <button
-              className="btn btn-primary"
-              onClick={() => setIsRunning(true)}
-              disabled={isRunning}
-            >
-              Start
-            </button>
-            <button
-              className="btn btn-secondary"
-              onClick={() => setIsRunning(false)}
-            >
-              Pause
-            </button>
-            <button
-              className="btn btn-secondary"
-              onClick={() => {
-                setIsRunning(false)
-                setSeconds(120)
-              }}
-            >
-              Reset
-            </button>
-          </div>
+      <div className={`timer-box ${seconds <= 30 ? 'timer-warning' : ''}`}>
+        <p className="section-label">Get to Know Each Other — Switch Timer</p>
+        <div className="timer-display">{formatTime(seconds)}</div>
+        <p className="timer-label">Time until switch to next group</p>
+        <div className="timer-buttons">
+          <button
+            className="btn btn-primary"
+            onClick={() => setIsRunning(true)}
+            disabled={isRunning}
+          >
+            Start
+          </button>
+          <button
+            className="btn btn-secondary"
+            onClick={() => setIsRunning(false)}
+          >
+            Pause
+          </button>
+          <button
+            className="btn btn-secondary"
+            onClick={() => {
+              setIsRunning(false)
+              setSeconds(120)
+            }}
+          >
+            Reset
+          </button>
         </div>
       </div>
     </div>

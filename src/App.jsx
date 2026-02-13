@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import Hero from './components/Hero'
-import GameFourCorners from './components/GameFourCorners'
-import GamePirate from './components/GamePirate'
-import GameBiathlon from './components/GameBiathlon'
+import { FourCornersQuestion, FourCornersTimer } from './components/GameFourCorners'
+import { ClumpsIntro, ClumpsCommands } from './components/GamePirate'
+import { BiathlonIntro, BiathlonActsVersion, BiathlonRules } from './components/GameBiathlon'
 import BiathlonCountdown from './components/BiathlonCountdown'
 import WinnerAnnouncement from './components/WinnerAnnouncement'
 import Thanks from './components/Thanks'
@@ -11,7 +11,7 @@ import NavDots from './components/NavDots'
 import './App.css'
 
 function App() {
-  const [activeSection, setActiveSection] = useState('game1')
+  const [activeSection, setActiveSection] = useState('game1-q')
   const [showCelebration, setShowCelebration] = useState(false)
   const [winnerName, setWinnerName] = useState('')
 
@@ -25,13 +25,13 @@ function App() {
   }
 
   useEffect(() => {
-    const sections = document.querySelectorAll('section[id], .hero')
+    const sections = document.querySelectorAll('section[id]')
     const handleScroll = () => {
       const scrollY = window.scrollY
-      let current = 'game1'
+      let current = 'game1-q'
       sections.forEach((sec) => {
         const top = sec.offsetTop
-        if (scrollY >= top - 150) current = sec.id || 'game1'
+        if (scrollY >= top - 150) current = sec.id
       })
       setActiveSection(current)
     }
@@ -44,21 +44,45 @@ function App() {
     <>
       <div className="app">
         <Hero />
-        <section id="game1">
-          <GameFourCorners />
+
+        {/* Game 1: 4 Corners */}
+        <section id="game1-q">
+          <FourCornersQuestion />
         </section>
-        <section id="game2">
-          <GamePirate />
+        <section id="game1-timer">
+          <FourCornersTimer />
         </section>
-        <section id="game3">
-          <GameBiathlon />
+
+        {/* Game 2: Clumps */}
+        <section id="game2-intro">
+          <ClumpsIntro />
         </section>
+        <section id="game2-commands">
+          <ClumpsCommands />
+        </section>
+
+        {/* Game 3: Biathlon */}
+        <section id="game3-intro">
+          <BiathlonIntro />
+        </section>
+        <section id="game3-acts">
+          <BiathlonActsVersion />
+        </section>
+        <section id="game3-rules">
+          <BiathlonRules />
+        </section>
+
+        {/* Race */}
         <section id="biathlon">
           <BiathlonCountdown />
         </section>
+
+        {/* Winner */}
         <section id="winners">
           <WinnerAnnouncement onAnnounce={handleAnnounceWinner} />
         </section>
+
+        {/* End */}
         <section id="thanks">
           <Thanks />
         </section>

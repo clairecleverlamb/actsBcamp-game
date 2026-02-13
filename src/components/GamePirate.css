@@ -1,40 +1,83 @@
 @import './GameFourCorners.css';
 
-.card-pirate .commands-area {
-  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+.clumps-section {
+  max-width: 900px;
+}
+
+.clumps-img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.15);
+  margin-bottom: 2.5rem;
+}
+
+.commands-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.commands-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.command-card {
+  background: #fff;
   border-radius: 16px;
   padding: 1.5rem;
-  margin-top: 1.5rem;
-  border: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+  border: 2px solid rgba(79, 70, 229, 0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.card-pirate .commands-area h4 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--primary-dark);
-  margin-bottom: 1rem;
+.command-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(79, 70, 229, 0.2);
+}
+
+.command-number {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  border-radius: 14px;
+}
+
+.command-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.command-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  color: var(--text);
   letter-spacing: 0.05em;
+  line-height: 1.1;
 }
 
-.edit-hint {
-  font-size: 0.75rem;
-  font-weight: 500;
+.command-action {
+  font-size: 0.95rem;
   color: var(--text-muted);
-}
-
-.commands-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.commands-list li {
-  padding: 0.6rem 0;
-  border-bottom: 2px solid rgba(79, 70, 229, 0.2);
-  font-size: 1.1rem;
   font-weight: 500;
 }
 
-.commands-list li:last-child {
-  border-bottom: none;
+@media (max-width: 600px) {
+  .commands-grid {
+    grid-template-columns: 1fr;
+  }
 }
