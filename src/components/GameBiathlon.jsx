@@ -17,6 +17,18 @@ export function BiathlonIntro() {
   )
 }
 
+export function BiathlonClean() {
+  return (
+    <div className="section biathlon-section clean-section">
+      <div className="clean-stack">
+        <span className="clean-word clean-sm">clean</span>
+        <span className="clean-word clean-md">clean</span>
+        <span className="clean-word clean-lg">CLEAN!</span>
+      </div>
+    </div>
+  )
+}
+
 export function BiathlonActsVersion() {
   return (
     <div className="section biathlon-section">

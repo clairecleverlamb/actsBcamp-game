@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Hero from './components/Hero'
 import { FourCornersQuestion, FourCornersQuestion2, FourCornersTimer } from './components/GameFourCorners'
 import { ClumpsIntro, ClumpsCommands } from './components/GamePirate'
-import { BiathlonIntro, BiathlonActsVersion, BiathlonRules } from './components/GameBiathlon'
+import { BiathlonIntro, BiathlonClean, BiathlonActsVersion, BiathlonRules } from './components/GameBiathlon'
 import WinterOlympics from './components/WinterOlympics'
 import WinnerAnnouncement from './components/WinnerAnnouncement'
 import Thanks from './components/Thanks'
@@ -72,6 +72,9 @@ function App() {
         {/* Game 3: Biathlon */}
         <section id="game3-intro">
           <BiathlonIntro />
+        </section>
+        <section id="game3-clean">
+          <BiathlonClean />
         </section>
         <section id="game3-acts">
           <BiathlonActsVersion />

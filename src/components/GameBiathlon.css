@@ -73,6 +73,60 @@
   color: var(--text);
 }
 
+/* Clean, Clean, CLEAN section */
+.clean-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clean-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.clean-word {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  animation: cleanPop 0.6s ease both;
+}
+
+.clean-sm {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  opacity: 0.5;
+  animation-delay: 0s;
+}
+
+.clean-md {
+  font-size: clamp(5rem, 14vw, 9rem);
+  opacity: 0.75;
+  animation-delay: 0.3s;
+}
+
+.clean-lg {
+  font-size: clamp(8rem, 22vw, 16rem);
+  color: var(--primary);
+  text-shadow: 0 0 40px rgba(79, 70, 229, 0.4), 0 0 80px rgba(79, 70, 229, 0.2);
+  animation-delay: 0.6s;
+}
+
+@keyframes cleanPop {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 600px) {
   .biathlon-rules {
     grid-template-columns: 1fr;

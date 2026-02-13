@@ -143,23 +143,23 @@
 }
 
 .choice-walk {
-  background: linear-gradient(90deg, #dcfce7 0%, #bbf7d0 100%);
+  background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
   border-radius: 16px 16px 0 0;
-  border: 1px solid #86efac;
+  border: 1px solid #f87171;
 }
 
 .choice-walk span {
-  color: #166534;
+  color: #991b1b;
 }
 
 .choice-indoor {
-  background: linear-gradient(90deg, #fef3c7 0%, #fde68a 100%);
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
   border-radius: 0 0 16px 16px;
-  border: 1px solid #fcd34d;
+  border: 1px solid #9ca3af;
 }
 
 .choice-indoor span {
-  color: #92400e;
+  color: #1f2937;
 }
 
 .choice-divider-h {
