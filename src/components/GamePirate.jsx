@@ -1,11 +1,35 @@
+import { useState } from 'react'
 import './GamePirate.css'
 
 const commands = [
-  { number: 3, name: 'HOUSE CHURCH', action: 'Hands up making a house' },
-  { number: 4, name: 'PRAYER HUDDLE', action: 'Closing eyes' },
-  { number: 5, name: 'DINING TABLE', action: 'Eating' },
-  { number: 6, name: 'MISSION TEAM', action: 'Walking in a circle' },
+  { number: 3, name: 'HOUSE CHURCH', action: 'Hands up making a house', image: '/house3.png' },
+  { number: 4, name: 'PRAYER HUDDLE', action: 'Closing eyes', image: '/prayer4.png' },
+  { number: 5, name: 'DINING TABLE', action: 'Eating', image: '/eating5.png' },
+  { number: 7, name: 'MISSION TEAM', action: 'Staying in line & tapping shoulders', image: '/trip7.png' },
 ]
+
+function CommandCard({ cmd }) {
+  const [hovered, setHovered] = useState(false)
+
+  return (
+    <div
+      className="command-card"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <span className="command-number">{cmd.number}</span>
+      <div className="command-info">
+        <span className="command-name">{cmd.name}</span>
+        <span className="command-action">{cmd.action}</span>
+      </div>
+      {hovered && (
+        <div className="command-preview">
+          <img src={cmd.image} alt={cmd.name} />
+        </div>
+      )}
+    </div>
+  )
+}
 
 export function ClumpsIntro() {
   return (
@@ -25,15 +49,10 @@ export function ClumpsCommands() {
   return (
     <div className="section clumps-section">
       <h3 className="commands-heading">Commands</h3>
+      <p className="commands-hint">Hover over a command to see the action</p>
       <div className="commands-grid">
         {commands.map((cmd) => (
-          <div key={cmd.number} className="command-card">
-            <span className="command-number">{cmd.number}</span>
-            <div className="command-info">
-              <span className="command-name">{cmd.name}</span>
-              <span className="command-action">{cmd.action}</span>
-            </div>
-          </div>
+          <CommandCard key={cmd.number} cmd={cmd} />
         ))}
       </div>
     </div>
