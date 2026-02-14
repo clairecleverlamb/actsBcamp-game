@@ -75,7 +75,7 @@ export default function CelebrationModal({ isOpen, teamName, onClose }) {
 
   return (
     <div className="celebration-overlay" onClick={() => { onClose() }}>
-      <audio ref={audioRef} src="/CELEBRATION.m4a" />
+      <audio ref={audioRef} src="/CELEBRATION_precise_17s.m4a" />
       <div className="celebration-content" onClick={(e) => e.stopPropagation()}>
         <div className="celebration-trophy">🏆</div>
         <h2 className="celebration-title">Congratulations!</h2>
