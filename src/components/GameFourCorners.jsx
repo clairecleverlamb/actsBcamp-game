@@ -45,6 +45,39 @@ export function FourCornersQuestion2() {
   )
 }
 
+function playTimesUpSound() {
+  const ctx = new (window.AudioContext || window.webkitAudioContext)()
+
+  // Three ascending alert beeps
+  const notes = [660, 880, 1100]
+  notes.forEach((freq, i) => {
+    const osc = ctx.createOscillator()
+    const gain = ctx.createGain()
+    osc.type = 'square'
+    osc.frequency.value = freq
+    gain.gain.setValueAtTime(0.2, ctx.currentTime + i * 0.25)
+    gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + i * 0.25 + 0.2)
+    osc.connect(gain)
+    gain.connect(ctx.destination)
+    osc.start(ctx.currentTime + i * 0.25)
+    osc.stop(ctx.currentTime + i * 0.25 + 0.2)
+  })
+
+  // Final long buzzer
+  const osc = ctx.createOscillator()
+  const gain = ctx.createGain()
+  osc.type = 'sawtooth'
+  osc.frequency.value = 440
+  gain.gain.setValueAtTime(0.25, ctx.currentTime + 0.8)
+  gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 1.8)
+  osc.connect(gain)
+  gain.connect(ctx.destination)
+  osc.start(ctx.currentTime + 0.8)
+  osc.stop(ctx.currentTime + 1.8)
+
+  setTimeout(() => ctx.close(), 2500)
+}
+
 export function FourCornersTimer() {
   const [seconds, setSeconds] = useState(120)
   const [isRunning, setIsRunning] = useState(false)
@@ -54,8 +87,9 @@ export function FourCornersTimer() {
     if (!isRunning) return
     intervalRef.current = setInterval(() => {
       setSeconds((s) => {
-        if (s <= 0) {
+        if (s <= 1) {
           setIsRunning(false)
+          playTimesUpSound()
           return 0
         }
         return s - 1

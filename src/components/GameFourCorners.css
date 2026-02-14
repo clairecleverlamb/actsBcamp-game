@@ -111,12 +111,6 @@
 .timer-box.timer-warning {
   background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
   border-color: var(--accent);
-  animation: pulse 1s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.01); }
 }
 
 .timer-display {
