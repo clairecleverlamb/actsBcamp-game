@@ -6,6 +6,8 @@ const commands = [
   { number: 4, name: 'PRAYER HUDDLE', action: 'Closing eyes', image: '/prayer4.png' },
   { number: 5, name: 'DINING TABLE', action: 'Eating', image: '/eating5.png' },
   { number: 7, name: 'MISSION TEAM', action: 'Staying in line & tapping shoulders', image: '/trip7.png' },
+  { number: 9, name: 'PRAISE BAND', action: 'Acting playing instruments or singing', image: '/praiseband9.png' },
+  { number: 11, name: 'BIBLE STUDY', action: 'Form a circle, holding books posture', image: '/biblestudy11.png' },
 ]
 
 function CommandCard({ cmd }) {

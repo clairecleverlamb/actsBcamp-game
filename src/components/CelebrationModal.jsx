@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import confetti from 'canvas-confetti'
 import './CelebrationModal.css'
 
@@ -54,14 +54,28 @@ function fireConfetti() {
 }
 
 export default function CelebrationModal({ isOpen, teamName, onClose }) {
+  const audioRef = useRef(null)
+
   useEffect(() => {
-    if (isOpen) fireConfetti()
+    if (isOpen) {
+      fireConfetti()
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0
+        audioRef.current.play().catch(() => {})
+      }
+    } else {
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current.currentTime = 0
+      }
+    }
   }, [isOpen])
 
   if (!isOpen) return null
 
   return (
-    <div className="celebration-overlay" onClick={onClose}>
+    <div className="celebration-overlay" onClick={() => { onClose() }}>
+      <audio ref={audioRef} src="/CELEBRATION.m4a" />
       <div className="celebration-content" onClick={(e) => e.stopPropagation()}>
         <div className="celebration-trophy">🏆</div>
         <h2 className="celebration-title">Congratulations!</h2>
