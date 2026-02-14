@@ -44,6 +44,18 @@ export function BiathlonActsVersion() {
   )
 }
 
+export function BiathlonIllustration() {
+  return (
+    <div className="section biathlon-section">
+      <img
+        src="/illu.png"
+        alt="Game setup illustration"
+        className="biathlon-illu"
+      />
+    </div>
+  )
+}
+
 export function BiathlonRules() {
   return (
     <div className="section biathlon-section">

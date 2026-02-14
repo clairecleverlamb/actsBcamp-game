@@ -3,7 +3,7 @@ import Hero from './components/Hero'
 import { FourCornersQuestion, FourCornersQuestion2, FourCornersTimer } from './components/GameFourCorners'
 import SharePrompts from './components/SharePrompts'
 import { ClumpsIntro, ClumpsCommands } from './components/GamePirate'
-import { BiathlonIntro, BiathlonClean, BiathlonActsVersion, BiathlonRules } from './components/GameBiathlon'
+import { BiathlonIntro, BiathlonClean, BiathlonActsVersion, BiathlonIllustration, BiathlonRules } from './components/GameBiathlon'
 import WinterOlympics from './components/WinterOlympics'
 import WinnerAnnouncement from './components/WinnerAnnouncement'
 import Thanks from './components/Thanks'
@@ -82,6 +82,9 @@ function App() {
         </section>
         <section id="game3-acts">
           <BiathlonActsVersion />
+        </section>
+        <section id="game3-illu">
+          <BiathlonIllustration />
         </section>
         <section id="game3-rules">
           <BiathlonRules />

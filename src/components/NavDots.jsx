@@ -11,6 +11,7 @@ const sections = [
   { id: 'game3-intro', href: '#game3-intro' },
   { id: 'game3-clean', href: '#game3-clean' },
   { id: 'game3-acts', href: '#game3-acts' },
+  { id: 'game3-illu', href: '#game3-illu' },
   { id: 'game3-rules', href: '#game3-rules' },
   { id: 'winners', href: '#winners' },
   { id: 'thanks', href: '#thanks' },
