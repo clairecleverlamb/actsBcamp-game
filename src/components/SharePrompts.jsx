@@ -1,18 +1,23 @@
 import './SharePrompts.css'
 
+const questions = [
+  { num: 1, text: 'If you could spend a day in someone else\'s life, whose life would you choose? Why?', color: '#6366f1' },
+  { num: 2, text: 'If you were setting off to Mars with one item, what would it be?', color: '#f97316' },
+  { num: 3, text: 'If aliens came to Earth, what ONE food would you give them to impress them haha?', color: '#10b981' },
+]
+
 export default function SharePrompts() {
   return (
     <div className="section share-section">
       <h2 className="share-heading">Share with Your Group!</h2>
-      <div className="share-card">
-        <p className="share-basics-line">Name / Campus / Major</p>
-        <div className="share-divider" />
-        <div className="share-questions">
-          <p className="share-line">❄️ Winter people — are you calm and cozy? Why?</p>
-          <p className="share-line">☀️ Summer people — are you adventurous? Why?</p>
-          <p className="share-line">🚶 Outdoor people — are you energetic? Why?</p>
-          <p className="share-line">🏠 Indoor people — are you reflective? Why?</p>
-        </div>
+      <div className="share-top-badge">Name / Campus / Major</div>
+      <div className="share-questions">
+        {questions.map((q) => (
+          <div className="share-q-card" key={q.num} style={{ '--q-color': q.color }}>
+            <span className="share-q-num">{q.num}</span>
+            <p className="share-q-text">{q.text}</p>
+          </div>
+        ))}
       </div>
     </div>
   )
