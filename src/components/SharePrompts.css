@@ -34,11 +34,11 @@
 .share-q-card {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.75rem;
   background: #fff;
   border-radius: 20px;
-  padding: 1.5rem 2rem;
-  border-left: 6px solid var(--q-color);
+  padding: 2rem 2.5rem;
+  border-left: 8px solid var(--q-color);
   box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
   text-align: left;
   animation: shareCardIn 0.5s ease both;
@@ -50,21 +50,21 @@
 
 .share-q-num {
   flex-shrink: 0;
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--q-color);
   color: #fff;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   border-radius: 50%;
   box-shadow: 0 4px 12px color-mix(in srgb, var(--q-color) 40%, transparent);
 }
 
 .share-q-text {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: var(--text);
   line-height: 1.6;
@@ -101,19 +101,19 @@
   }
 
   .share-q-card {
-    padding: 2rem 2.5rem;
-    border-radius: 24px;
-    gap: 2rem;
-    border-left-width: 8px;
+    padding: 2.5rem 3rem;
+    border-radius: 28px;
+    gap: 2.5rem;
+    border-left-width: 10px;
   }
 
   .share-q-num {
-    width: 70px;
-    height: 70px;
-    font-size: 2.4rem;
+    width: 90px;
+    height: 90px;
+    font-size: 3rem;
   }
 
   .share-q-text {
-    font-size: 1.7rem;
+    font-size: 2.2rem;
   }
 }
